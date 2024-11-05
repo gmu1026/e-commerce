@@ -1,3 +1,13 @@
 spring:
     application:
-        name: e-comerce
+        name: e-commerce
+    config:
+        import: optional:configserver:localhost:8888
+    session:
+      jdbc:
+        initialize-schema: always
+
+management:
+  health:
+    elasticsearch:
+        enabled: false
